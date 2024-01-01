@@ -1,0 +1,7 @@
+node_modules
+.pnpm-store
+.next
+coverage
+storybook-static
+package.json
+pnpm-lock.yaml

@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "dockerComposeFile": [
+    "../compose.yml",
+    "../compose-dev.yml",
+    "compose-devcontainer.yml"
+  ],
+  "service": "frontend",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "stylelint.vscode-stylelint",
+        "github.copilot",
+        "github.copilot-chat"
+      ]
+    }
+  }
+}
