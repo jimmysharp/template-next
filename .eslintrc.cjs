@@ -12,6 +12,7 @@ module.exports = {
     'react-hooks',
     'prefer-arrow',
     'vitest',
+    'testing-library',
   ],
   extends: [
     'eslint:recommended',
@@ -161,7 +162,7 @@ module.exports = {
     // テストの設定
     {
       files: ['**/*.test.ts', '**/*.test.tsx'],
-      extends: ['plugin:vitest/recommended'],
+      extends: ['plugin:vitest/recommended', 'plugin:testing-library/react'],
     },
   ],
 };
