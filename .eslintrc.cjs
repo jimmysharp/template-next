@@ -1,6 +1,11 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    node: true,
+    es2024: true,
+  },
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -16,7 +21,7 @@ module.exports = {
   overrides: [
     // React / Next.js
     {
-      files: ['**/*.{ts,tsx}'],
+      files: ['**/*.{js,jsx,ts,tsx}'],
       plugins: ['jsx-a11y', 'react', 'react-hooks'],
       extends: [
         'plugin:react/recommended',
@@ -175,6 +180,9 @@ module.exports = {
     // Vitest / Testing Library
     {
       files: ['**/*.test.ts', '**/*.test.tsx'],
+      env: {
+        jest: true,
+      },
       plugins: ['vitest', 'testing-library'],
       extends: ['plugin:vitest/recommended', 'plugin:testing-library/react'],
     },
