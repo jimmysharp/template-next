@@ -11,6 +11,8 @@ const config = {
         browsers: ['> 0.5%', 'not dead'],
       },
     ],
+    // レガシーブラウザ対応
+    'media-feature-range-notation': 'prefix',
   },
 };
 
