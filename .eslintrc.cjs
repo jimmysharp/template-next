@@ -114,16 +114,6 @@ module.exports = {
         ],
         pathGroups: [
           {
-            pattern: '{react,react-dom/**}',
-            group: 'builtin',
-            position: 'before',
-          },
-          {
-            pattern: '{[A-Z]*,**/[A-Z]*}',
-            group: 'internal',
-            position: 'after',
-          },
-          {
             pattern: './*.{css,scss,sass,less}',
             group: 'index',
             position: 'after',
