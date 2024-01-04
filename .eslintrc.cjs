@@ -164,14 +164,14 @@ module.exports = {
     },
     // Next.js Router
     {
-      files: ['src/pages/**/*.tsx', 'src/app/**/*.tsx'],
+      files: ['src/{pages,app}/**/*.tsx'],
       rules: {
         'import/no-default-export': 'off',
       },
     },
     // Storybook
     {
-      files: ['*.stories.tsx', '*.stories.ts'],
+      files: ['*.{story,stories}.{ts,tsx}'],
       rules: {
         'import/no-default-export': 'off',
         '@typescript-eslint/consistent-type-definitions': 'off',
@@ -179,7 +179,7 @@ module.exports = {
     },
     // Vitest / Testing Library
     {
-      files: ['**/*.test.ts', '**/*.test.tsx'],
+      files: ['**/*.{test,spec}.{ts,tsx}'],
       env: {
         jest: true,
       },
