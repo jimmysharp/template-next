@@ -21,6 +21,7 @@
       "source.fixAll.stylelint": "explicit"
     }
   },
+  "stylelint.validate": ["css", "scss", "less", "postcss"],
   "css.validate": false,
   "typescript.preferences.preferTypeOnlyAutoImports": true
 }
