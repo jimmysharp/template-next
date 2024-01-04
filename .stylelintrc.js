@@ -9,6 +9,8 @@ const config = {
       {
         severity: 'warning',
         browsers: ['> 0.5%', 'not dead'],
+        ignore: ['css-nesting'],
+        ignorePartialSupport: true,
       },
     ],
     // レガシーブラウザ対応
