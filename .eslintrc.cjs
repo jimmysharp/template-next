@@ -1,150 +1,170 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
-  plugins: [
-    '@typescript-eslint/eslint-plugin',
-    'jsx-a11y',
-    'react',
-    'react-hooks',
-    'prefer-arrow',
-    'vitest',
-    'testing-library',
-  ],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:@typescript-eslint/stylistic-type-checked',
-    'standard-with-typescript',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'next/core-web-vitals',
-    'plugin:react/jsx-runtime',
-    'prettier',
-  ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    tsconfigRootDir: '.',
-    project: 'tsconfig.json',
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
+  // Base
+  extends: ['eslint:recommended', 'prettier'],
   rules: {
-    // reactにそぐわないルールの変更
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
-    ],
-    '@typescript-eslint/no-misused-promises': [
-      'error',
-      {
-        checksVoidReturn: false,
-      },
-    ],
-    '@typescript-eslint/triple-slash-reference': [
-      'error',
-      {
-        types: 'always',
-      },
-    ],
-    '@typescript-eslint/no-confusing-void-expression': [
-      'error',
-      {
-        ignoreArrowShorthand: true,
-        ignoreVoidOperator: true,
-      },
-    ],
-    '@typescript-eslint/strict-boolean-expressions': [
-      'error',
-      {
-        allowNullableObject: true,
-      },
-    ],
-    'no-nested-ternary': 'off',
-    // typescriptにそぐわないルールの変更
-    'react/prop-types': 'off',
-    'react/require-default-props': 'off',
-    // typeを強制
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    // named exportを強制
-    'import/prefer-default-export': 'off',
-    'import/no-default-export': 'error',
-    // arrow functionを強制
-    'prefer-arrow/prefer-arrow-functions': [
-      'error',
-      {
-        disallowPrototype: true,
-        singleReturnOnly: false,
-        classPropertiesAllowed: true,
-      },
-    ],
-    'react/function-component-definition': [
-      'error',
-      {
-        namedComponents: 'arrow-function',
-        unNamedComponents: 'arrow-function',
-      },
-    ],
-    // import順序を強制
-    'import/extensions': [
-      'error',
-      {
-        ignorePackages: true,
-        pattern: {
-          js: 'never',
-          jsx: 'never',
-          ts: 'never',
-          tsx: 'never',
-        },
-      },
-    ],
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-          'object',
-        ],
-        pathGroups: [
-          {
-            pattern: './*.{css,scss,sass,less}',
-            group: 'index',
-            position: 'after',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['builtin'],
-        alphabetize: {
-          order: 'asc',
-        },
-      },
-    ],
-    // その他
     'no-console': 'error',
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-    'import/resolver': {
-      typescript: {},
-    },
-  },
   overrides: [
-    // next.js routerの設定
+    // React / Next.js
+    {
+      files: ['**/*.{ts,tsx}'],
+      plugins: ['jsx-a11y', 'react', 'react-hooks'],
+      extends: [
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+        'plugin:react-hooks/recommended',
+        'plugin:jsx-a11y/recommended',
+        'next/core-web-vitals',
+        'prettier',
+      ],
+      settings: {
+        react: {
+          version: 'detect',
+        },
+      },
+      rules: {
+        // TypeScriptにそぐわないルールの変更
+        'react/prop-types': 'off',
+        'react/require-default-props': 'off',
+        'react/function-component-definition': [
+          'error',
+          {
+            namedComponents: 'arrow-function',
+            unNamedComponents: 'arrow-function',
+          },
+        ],
+      },
+    },
+    // TypeScript
+    {
+      files: ['**/*.{ts,tsx}'],
+      plugins: ['@typescript-eslint/eslint-plugin', 'prefer-arrow'],
+      extends: [
+        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
+        'standard-with-typescript',
+        'prettier',
+      ],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: 'tsconfig.json',
+      },
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: ['.ts', '.tsx'],
+          },
+          typescript: {
+            alwaysTryTypes: true,
+          },
+        },
+      },
+      rules: {
+        // Reactにそぐわないルールの変更
+        'no-nested-ternary': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+          },
+        ],
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          {
+            checksVoidReturn: false,
+          },
+        ],
+        '@typescript-eslint/triple-slash-reference': [
+          'error',
+          {
+            types: 'always',
+          },
+        ],
+        '@typescript-eslint/no-confusing-void-expression': [
+          'error',
+          {
+            ignoreArrowShorthand: true,
+            ignoreVoidOperator: true,
+          },
+        ],
+        '@typescript-eslint/strict-boolean-expressions': [
+          'error',
+          {
+            allowNullableObject: true,
+          },
+        ],
+        // typeを強制
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+        // named exportを強制
+        'import/prefer-default-export': 'off',
+        'import/no-default-export': 'error',
+        // arrow functionを強制
+        'prefer-arrow/prefer-arrow-functions': [
+          'error',
+          {
+            disallowPrototype: true,
+            singleReturnOnly: false,
+            classPropertiesAllowed: true,
+          },
+        ],
+        // import順序を強制
+        'import/extensions': [
+          'error',
+          {
+            ignorePackages: true,
+            pattern: {
+              js: 'never',
+              jsx: 'never',
+              ts: 'never',
+              tsx: 'never',
+            },
+          },
+        ],
+        'import/order': [
+          'error',
+          {
+            groups: [
+              'builtin',
+              'external',
+              'internal',
+              'parent',
+              'sibling',
+              'index',
+              'object',
+            ],
+            pathGroups: [
+              {
+                pattern: './*.{css,scss,sass,less}',
+                group: 'index',
+                position: 'after',
+              },
+            ],
+            pathGroupsExcludedImportTypes: ['builtin'],
+            alphabetize: {
+              order: 'asc',
+            },
+          },
+        ],
+      },
+    },
+    // Next.js Router
     {
       files: ['src/pages/**/*.tsx', 'src/app/**/*.tsx'],
       rules: {
         'import/no-default-export': 'off',
       },
     },
-    // storybookの設定
+    // Storybook
     {
       files: ['*.stories.tsx', '*.stories.ts'],
       rules: {
@@ -152,9 +172,10 @@ module.exports = {
         '@typescript-eslint/consistent-type-definitions': 'off',
       },
     },
-    // テストの設定
+    // Vitest / Testing Library
     {
       files: ['**/*.test.ts', '**/*.test.tsx'],
+      plugins: ['vitest', 'testing-library'],
       extends: ['plugin:vitest/recommended', 'plugin:testing-library/react'],
     },
   ],
