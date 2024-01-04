@@ -14,7 +14,7 @@ const config = {
       },
     ],
     // レガシーブラウザ対応
-    'media-feature-range-notation': 'prefix',
+    'media-feature-range-notation': 'context',
   },
 };
 
