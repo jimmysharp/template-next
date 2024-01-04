@@ -1,9 +1,4 @@
 module.exports = {
-  env: {
-    node: true,
-    jest: true,
-    browser: true,
-  },
   root: true,
   plugins: [
     '@typescript-eslint/eslint-plugin',
@@ -61,7 +56,13 @@ module.exports = {
         ignoreVoidOperator: true,
       },
     ],
-    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/strict-boolean-expressions': [
+      'error',
+      {
+        allowNullableObject: true,
+      },
+    ],
+    'no-nested-ternary': 'off',
     // typescriptにそぐわないルールの変更
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
@@ -108,8 +109,8 @@ module.exports = {
           'internal',
           'parent',
           'sibling',
-          'object',
           'index',
+          'object',
         ],
         pathGroups: [
           {
@@ -123,7 +124,7 @@ module.exports = {
             position: 'after',
           },
           {
-            pattern: './**.module.css',
+            pattern: './*.{css,scss,sass,less}',
             group: 'index',
             position: 'after',
           },
@@ -134,6 +135,8 @@ module.exports = {
         },
       },
     ],
+    // その他
+    'no-console': 'error',
   },
   settings: {
     react: {
