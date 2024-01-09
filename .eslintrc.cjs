@@ -186,5 +186,11 @@ module.exports = {
       plugins: ['vitest', 'testing-library'],
       extends: ['plugin:vitest/recommended', 'plugin:testing-library/react'],
     },
+    // Public
+    {
+      files: ['public/**/*.js'],
+      plugins: ['compat'],
+      extends: ['plugin:compat/recommended'],
+    },
   ],
 };

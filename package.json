@@ -48,6 +48,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard-with-typescript": "^43.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-compat": "^4.2.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-n": "^16.6.0",
@@ -64,13 +65,10 @@
     "stylelint": "^16.1.0",
     "stylelint-config-recess-order": "^4.4.0",
     "stylelint-config-standard-scss": "^12.0.0",
+    "stylelint-no-unsupported-browser-features": "^8.0.0",
     "typescript": "^5",
     "vite-tsconfig-paths": "^4.2.3",
     "vitest": "^1.1.1"
   },
-  "packageManager": "pnpm@8.13.1+sha256.9e5f62ce5f2b7d4ceb3c2848f41cf0b33032c24d683c7088b53f62b1885fb246",
-  "browserslist": [
-    "> 0.5%",
-    "not dead"
-  ]
+  "packageManager": "pnpm@8.13.1+sha256.9e5f62ce5f2b7d4ceb3c2848f41cf0b33032c24d683c7088b53f62b1885fb246"
 }
