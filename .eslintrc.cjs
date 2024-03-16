@@ -56,7 +56,7 @@ module.exports = {
       extends: [
         'plugin:@typescript-eslint/recommended-type-checked',
         'plugin:@typescript-eslint/stylistic-type-checked',
-        'standard-with-typescript',
+        'love',
         'prettier',
       ],
       parser: '@typescript-eslint/parser',
