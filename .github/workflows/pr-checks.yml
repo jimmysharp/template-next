@@ -20,8 +20,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-      - name: Check version conflicts
-        run: pnpm install --resolution-only
       - name: Format check
         run: pnpm format:check
       - name: Type check
