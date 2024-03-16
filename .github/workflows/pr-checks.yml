@@ -1,0 +1,38 @@
+name: CI checks
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+
+jobs:
+  pr-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.11'
+      - run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install
+      - name: Check version conflicts
+        run: pnpm install --resolution-only
+      - name: Format check
+        run: pnpm format:check
+      - name: Type check
+        run: pnpm type-check
+      - name: Lint check
+        run: pnpm lint
+      - name: CSS lint check
+        run: pnpm lint:style
+      - name: Unit test
+        run: pnpm test
+      - name: Build check
+        run: pnpm build
+      - name: Storybok build check
+        run: pnpm build-storybook

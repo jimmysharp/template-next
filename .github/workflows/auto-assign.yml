@@ -1,0 +1,19 @@
+name: PR auto assigner
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.actor, '[bot]') }}
+    steps:
+      - name: Auto assign PR creator
+        run: gh pr edit $NUMBER --add-assignees $ASSIGNEES
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.pull_request.number }}
+          ASSIGNES: ${{ github.actor }}
