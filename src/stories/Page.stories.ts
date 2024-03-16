@@ -23,7 +23,6 @@ export const LoggedIn: Story = {
     const canvas = within(canvasElement);
     const loginButton = canvas.getByRole('button', { name: /Log in/i });
     await expect(loginButton).toBeInTheDocument();
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     await userEvent.click(loginButton);
     await expect(loginButton).not.toBeInTheDocument();
 
