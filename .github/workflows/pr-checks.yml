@@ -19,9 +19,7 @@ jobs:
       - run: corepack enable
 
       - name: Install dependencies
-        run: pnpm install
-      - name: Check version conflicts
-        run: pnpm install --resolution-only
+        run: pnpm install --frozen-lockfile
       - name: Format check
         run: pnpm format:check
       - name: Type check
