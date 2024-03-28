@@ -7,7 +7,7 @@
     ":semanticCommits"
   ],
   "timezone": "Asia/Tokyo",
-  "schedule": ["at any time"],
+  "schedule": ["every weekend"],
   "prConcurrentLimit": 10,
   "automerge": false,
   "rangeStrategy": "bump",
