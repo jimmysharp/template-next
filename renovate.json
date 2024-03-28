@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":disableDependencyDashboard"],
   "timezone": "Asia/Tokyo",
-  "schedule": ["every weekend"],
+  "schedule": ["at any time"],
   "prConcurrentLimit": 10,
   "automerge": false,
   "rangeStrategy": "bump",
