@@ -45,6 +45,7 @@ export const Button = ({
       {...props}
     >
       {label}
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx>{`
         button {
           background-color: ${backgroundColor};
