@@ -84,9 +84,15 @@ export default tseslint.config(
       'import-x': importX,
     },
     settings: {
+      'import-x/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+      'import-x/parsers': {
+        '@typescript-eslint/parser': ['.js', '.jsx', '.ts', '.tsx'],
+      },
       'import-x/resolver': {
         typescript: true,
-        node: true,
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
       },
     },
     rules: {
@@ -247,9 +253,10 @@ export default tseslint.config(
   },
   // config files
   {
-    files: ['*.{config}.{js,ts}'],
+    files: ['*.config.{js,ts}', '*rc.js'],
     rules: {
       'import-x/no-default-export': 'off',
+      'import-x/no-named-as-default-member': 'off',
     },
   },
   // Public
