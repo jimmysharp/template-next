@@ -13,7 +13,7 @@ importers:
         version: 14.2.4
       next:
         specifier: 14.2.4
-        version: 14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
+        version: 14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -32,7 +32,7 @@ importers:
         version: 8.1.9(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-interactions':
         specifier: ^8.1.9
-        version: 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+        version: 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       '@storybook/addon-links':
         specifier: ^8.1.9
         version: 8.1.9(react@18.3.1)
@@ -41,19 +41,19 @@ importers:
         version: 8.1.9(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/nextjs':
         specifier: ^8.1.9
-        version: 8.1.9(esbuild@0.20.2)(next@14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)(type-fest@4.18.3)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))(webpack-hot-middleware@2.26.1)(webpack@5.91.0(esbuild@0.20.2))
+        version: 8.1.9(esbuild@0.20.2)(next@14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6))(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)(type-fest@4.18.3)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))(webpack-hot-middleware@2.26.1)(webpack@5.91.0(esbuild@0.20.2))
       '@storybook/react':
         specifier: ^8.1.9
         version: 8.1.9(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
       '@storybook/test':
         specifier: ^8.1.9
-        version: 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+        version: 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       '@testing-library/dom':
         specifier: ^10.1.0
         version: 10.1.0
       '@testing-library/jest-dom':
         specifier: ^6.4.6
-        version: 6.4.6(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+        version: 6.4.6(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       '@testing-library/react':
         specifier: ^16.0.0
         version: 16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -71,10 +71,10 @@ importers:
         version: 18.3.0
       '@vitejs/plugin-react-swc':
         specifier: ^3.7.0
-        version: 3.7.0(@swc/helpers@0.5.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0))
+        version: 3.7.0(@swc/helpers@0.5.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0))
       '@vitest/coverage-istanbul':
         specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+        version: 1.6.0(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -116,7 +116,7 @@ importers:
         version: 6.2.2(eslint@8.57.0)(typescript@5.4.5)
       eslint-plugin-vitest:
         specifier: ^0.5.4
-        version: 0.5.4(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+        version: 0.5.4(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       globals:
         specifier: ^15.6.0
         version: 15.6.0
@@ -127,8 +127,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       sass:
-        specifier: ^1.77.5
-        version: 1.77.5
+        specifier: ^1.77.6
+        version: 1.77.6
       storybook:
         specifier: ^8.1.9
         version: 8.1.9(@babel/preset-env@7.24.6(@babel/core@7.24.6))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -152,13 +152,13 @@ importers:
         version: 7.13.1(eslint@8.57.0)(typescript@5.4.5)
       vite:
         specifier: ^5.3.1
-        version: 5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0)
+        version: 5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0)
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.4.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0))
+        version: 4.3.2(typescript@5.4.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0)
+        version: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0)
 
 packages:
 
@@ -5481,8 +5481,8 @@ packages:
       sass-embedded:
         optional: true
 
-  sass@1.77.5:
-    resolution: {integrity: sha512-oDfX1mukIlxacPdQqNb6mV2tVCrnE+P3nVYioy72V5tlk56CPNcO4TCuFcaCRKKfJ1M3lH95CleRS+dVKL2qMg==}
+  sass@1.77.6:
+    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -7983,11 +7983,11 @@ snapshots:
     dependencies:
       '@storybook/global': 5.0.0
 
-  '@storybook/addon-interactions@8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))':
+  '@storybook/addon-interactions@8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.1.9
-      '@storybook/test': 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+      '@storybook/test': 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       '@storybook/types': 8.1.9
       polished: 4.2.2
       ts-dedent: 2.2.0
@@ -8416,7 +8416,7 @@ snapshots:
 
   '@storybook/manager@8.1.9': {}
 
-  '@storybook/nextjs@8.1.9(esbuild@0.20.2)(next@14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)(type-fest@4.18.3)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))(webpack-hot-middleware@2.26.1)(webpack@5.91.0(esbuild@0.20.2))':
+  '@storybook/nextjs@8.1.9(esbuild@0.20.2)(next@14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6))(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)(type-fest@4.18.3)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))(webpack-hot-middleware@2.26.1)(webpack@5.91.0(esbuild@0.20.2))':
     dependencies:
       '@babel/core': 7.24.6
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.24.6)
@@ -8439,7 +8439,7 @@ snapshots:
       '@storybook/preset-react-webpack': 8.1.9(esbuild@0.20.2)(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
       '@storybook/preview-api': 8.1.9
       '@storybook/react': 8.1.9(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
-      '@storybook/test': 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+      '@storybook/test': 8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       '@storybook/types': 8.1.9
       '@types/node': 18.19.24
       '@types/semver': 7.5.8
@@ -8449,7 +8449,7 @@ snapshots:
       fs-extra: 11.2.0
       image-size: 1.1.1
       loader-utils: 3.2.1
-      next: 14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
+      next: 14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
       node-polyfill-webpack-plugin: 2.0.1(webpack@5.91.0(esbuild@0.20.2))
       pnp-webpack-plugin: 1.7.0(typescript@5.4.5)
       postcss: 8.4.38
@@ -8458,7 +8458,7 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-refresh: 0.14.2
       resolve-url-loader: 5.0.0
-      sass-loader: 12.6.0(sass@1.77.5)(webpack@5.91.0(esbuild@0.20.2))
+      sass-loader: 12.6.0(sass@1.77.6)(webpack@5.91.0(esbuild@0.20.2))
       semver: 7.6.2
       style-loader: 3.3.3(webpack@5.91.0(esbuild@0.20.2))
       styled-jsx: 5.1.1(@babel/core@7.24.6)(react@18.3.1)
@@ -8618,14 +8618,14 @@ snapshots:
       - prettier
       - supports-color
 
-  '@storybook/test@8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))':
+  '@storybook/test@8.1.9(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))':
     dependencies:
       '@storybook/client-logger': 8.1.9
       '@storybook/core-events': 8.1.9
       '@storybook/instrumenter': 8.1.9
       '@storybook/preview-api': 8.1.9
       '@testing-library/dom': 9.3.4
-      '@testing-library/jest-dom': 6.4.6(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))
+      '@testing-library/jest-dom': 6.4.6(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))
       '@testing-library/user-event': 14.5.2(@testing-library/dom@9.3.4)
       '@vitest/expect': 1.3.1
       '@vitest/spy': 1.6.0
@@ -8733,7 +8733,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.6(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))':
+  '@testing-library/jest-dom@6.4.6(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.24.6
@@ -8744,7 +8744,7 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
     optionalDependencies:
-      vitest: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0)
+      vitest: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0)
 
   '@testing-library/react@16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -9115,14 +9115,14 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react-swc@3.7.0(@swc/helpers@0.5.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0))':
+  '@vitejs/plugin-react-swc@3.7.0(@swc/helpers@0.5.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0))':
     dependencies:
       '@swc/core': 1.5.24(@swc/helpers@0.5.5)
-      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0)
+      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0)
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0))':
+  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0))':
     dependencies:
       debug: 4.3.4
       istanbul-lib-coverage: 3.2.2
@@ -9133,7 +9133,7 @@ snapshots:
       magicast: 0.3.3
       picocolors: 1.0.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0)
+      vitest: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10680,12 +10680,12 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-vitest@0.5.4(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0)):
+  eslint-plugin-vitest@0.5.4(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0)):
     dependencies:
       '@typescript-eslint/utils': 7.11.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
     optionalDependencies:
-      vitest: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0)
+      vitest: 1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -11931,7 +11931,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next@14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5):
+  next@14.2.4(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6):
     dependencies:
       '@next/env': 14.2.4
       '@swc/helpers': 0.5.5
@@ -11952,7 +11952,7 @@ snapshots:
       '@next/swc-win32-arm64-msvc': 14.2.4
       '@next/swc-win32-ia32-msvc': 14.2.4
       '@next/swc-win32-x64-msvc': 14.2.4
-      sass: 1.77.5
+      sass: 1.77.6
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -12805,15 +12805,15 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@12.6.0(sass@1.77.5)(webpack@5.91.0(esbuild@0.20.2)):
+  sass-loader@12.6.0(sass@1.77.6)(webpack@5.91.0(esbuild@0.20.2)):
     dependencies:
       klona: 2.0.6
       neo-async: 2.6.2
       webpack: 5.91.0(esbuild@0.20.2)
     optionalDependencies:
-      sass: 1.77.5
+      sass: 1.77.6
 
-  sass@1.77.5:
+  sass@1.77.6:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.5
@@ -13638,13 +13638,13 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-node@1.6.0(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0):
+  vite-node@1.6.0(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0)
+      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -13655,18 +13655,18 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0)):
+  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0)):
     dependencies:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 3.0.3(typescript@5.4.5)
     optionalDependencies:
-      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0)
+      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0):
+  vite@5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.38
@@ -13674,10 +13674,10 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.14.7
       fsevents: 2.3.3
-      sass: 1.77.5
+      sass: 1.77.6
       terser: 5.31.0
 
-  vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.5)(terser@5.31.0):
+  vitest@1.6.0(@types/node@20.14.7)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.0):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -13696,8 +13696,8 @@ snapshots:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.4
-      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0)
-      vite-node: 1.6.0(@types/node@20.14.7)(sass@1.77.5)(terser@5.31.0)
+      vite: 5.3.1(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0)
+      vite-node: 1.6.0(@types/node@20.14.7)(sass@1.77.6)(terser@5.31.0)
       why-is-node-running: 2.2.2
     optionalDependencies:
       '@types/node': 20.14.7
