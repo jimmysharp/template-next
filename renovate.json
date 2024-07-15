@@ -13,7 +13,7 @@
   ],
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
-  "prConcurrentLimit": 10,
+  "prConcurrentLimit": 15,
   "automerge": false,
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
