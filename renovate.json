@@ -1,10 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    ":semanticCommits",
+    ":semanticPrefixChore",
+    ":ignoreModulesAndTests",
+    "group:monorepos",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all",
     ":disableDependencyDashboard",
-    ":prHourlyLimitNone",
-    ":semanticCommits"
+    ":prHourlyLimitNone"
   ],
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
@@ -21,32 +26,8 @@
       "allowedVersions": "/^[0-9]*[02468]([.-].*)?$/"
     },
     {
-      "groupName": "github-actions",
-      "matchManagers": ["github-actions"]
-    },
-    {
-      "groupName": "next",
-      "matchPackageNames": [
-        "next",
-        "react",
-        "react-dom",
-        "@types/react",
-        "@types/react-dom",
-        "eslint-config-next",
-        "@next/bundle-analyzer"
-      ]
-    },
-    {
       "groupName": "eslint",
-      "matchPackageNames": ["eslint"],
-      "matchPackagePrefixes": ["eslint-"],
-      "excludePackageNames": ["eslint-config-next", "eslint-config-love"],
-      "excludePackagePrefixes": ["@typescript-eslint/"]
-    },
-    {
-      "groupName": "typescript-eslint",
-      "matchPackageNames": ["eslint-config-love"],
-      "matchPackagePrefixes": ["@typescript-eslint/"]
+      "matchPackagePrefixes": ["eslint-"]
     },
     {
       "groupName": "stylelint",
@@ -54,14 +35,10 @@
       "matchPackagePrefixes": ["stylelint-"]
     },
     {
-      "groupName": "storybook",
-      "matchPackageNames": ["storybook"],
-      "matchPackagePrefixes": ["@storybook/"]
-    },
-    {
-      "groupName": "vite",
-      "matchPackageNames": ["vitest", "vite"],
-      "matchPackagePrefixes": ["@vite/", "vite-", "@vitejs/", "@vitest/"]
+      "matchPackageNames": ["eslint"],
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ]
 }
