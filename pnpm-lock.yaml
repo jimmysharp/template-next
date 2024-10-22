@@ -116,8 +116,8 @@ importers:
         specifier: ^6.4.0
         version: 6.4.0(eslint@9.13.0(jiti@1.21.0))(typescript@5.5.3)
       globals:
-        specifier: ^15.8.0
-        version: 15.8.0
+        specifier: ^15.11.0
+        version: 15.11.0
       jsdom:
         specifier: ^25.0.1
         version: 25.0.1
@@ -3506,8 +3506,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.8.0:
-    resolution: {integrity: sha512-VZAJ4cewHTExBWDHR6yptdIBlx9YSSZuwojj9Nt5mBRXQzrKakDsVKQ1J63sklLvzAJm0X5+RpO4i3Y2hcOnFw==}
+  globals@15.11.0:
+    resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -9334,7 +9334,7 @@ snapshots:
       caniuse-lite: 1.0.30001642
       eslint: 9.13.0(jiti@1.21.0)
       find-up: 5.0.0
-      globals: 15.8.0
+      globals: 15.11.0
       lodash.memoize: 4.1.2
       semver: 7.6.2
 
@@ -9877,7 +9877,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.8.0: {}
+  globals@15.11.0: {}
 
   globalthis@1.0.4:
     dependencies:
