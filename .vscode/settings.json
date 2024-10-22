@@ -21,7 +21,6 @@
       "source.fixAll.stylelint": "explicit"
     }
   },
-  "eslint.experimental.useFlatConfig": true,
   "stylelint.validate": ["css", "scss", "less", "postcss"],
   "css.validate": false,
   "typescript.preferences.preferTypeOnlyAutoImports": true
