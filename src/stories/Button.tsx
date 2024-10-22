@@ -1,3 +1,5 @@
+import type { JSX } from 'react';
+
 import './button.css';
 
 type ButtonProps = {
@@ -29,7 +31,7 @@ type ButtonProps = {
 export const Button = ({
   primary = false,
   size = 'medium',
-  backgroundColor,
+  backgroundColor = 'white',
   label,
   ...props
 }: ButtonProps): JSX.Element => {

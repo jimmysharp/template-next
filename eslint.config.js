@@ -1,6 +1,7 @@
 import eslint from '@eslint/js';
 import next from '@next/eslint-plugin-next';
-import love from 'eslint-config-love';
+import tsParser from '@typescript-eslint/parser';
+import vitest from '@vitest/eslint-plugin';
 import prettier from 'eslint-config-prettier';
 import compat from 'eslint-plugin-compat';
 import importX from 'eslint-plugin-import-x';
@@ -8,8 +9,8 @@ import a11y from 'eslint-plugin-jsx-a11y';
 import preferArrow from 'eslint-plugin-prefer-arrow-functions';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import storybook from 'eslint-plugin-storybook';
 import testingLibrary from 'eslint-plugin-testing-library';
-import vitest from 'eslint-plugin-vitest';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -20,23 +21,44 @@ export default tseslint.config(
       'no-console': 'error',
     },
   },
+  // TypeScript
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
+    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     languageOptions: {
       globals: {
         ...globals.node,
       },
       parserOptions: {
-        project: true,
+        projectService: true,
+        parser: tsParser,
         tsconfigRootDir: import.meta.dirname,
       },
     },
   },
-  // TypeScript
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
-  love,
   {
     rules: {
+      // strictに不足するルール追加
+      '@typescript-eslint/explicit-function-return-type': [
+        'error',
+        {
+          allowExpressions: true,
+          allowTypedFunctionExpressions: true,
+          allowHigherOrderFunctions: true,
+          allowDirectConstAssertionInArrowFunctions: true,
+        },
+      ],
+      '@typescript-eslint/no-dupe-class-members': 'error',
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/no-loop-func': 'error',
+      '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: true }],
+      '@typescript-eslint/prefer-readonly': 'error',
+      '@typescript-eslint/no-useless-empty-export': 'error',
+      '@typescript-eslint/require-array-sort-compare': [
+        'error',
+        { ignoreStringArrays: true },
+      ],
       // Reactにそぐわないルールの変更
       'no-nested-ternary': 'off',
       '@typescript-eslint/no-unused-vars': [
@@ -67,10 +89,6 @@ export default tseslint.config(
       ],
       // typeを強制
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-      // React Queryなどで使いづらいため無効化
-      '@typescript-eslint/promise-function-async': 'off',
-      // Reactの記法上辛いので無効化
-      '@typescript-eslint/strict-boolean-expressions': 'off',
     },
   },
   // JavaScript
@@ -79,11 +97,11 @@ export default tseslint.config(
     ...tseslint.configs.disableTypeChecked,
   },
   // import
+  importX.flatConfigs.recommended,
+  importX.flatConfigs.typescript,
   {
-    plugins: {
-      'import-x': importX,
-    },
     settings: {
+      // 一部ライブラリのimportでエラーとなるため、jsもtsパーサーを通す
       'import-x/extensions': ['.js', '.jsx', '.ts', '.tsx'],
       'import-x/parsers': {
         '@typescript-eslint/parser': ['.js', '.jsx', '.ts', '.tsx'],
@@ -96,8 +114,6 @@ export default tseslint.config(
       },
     },
     rules: {
-      ...importX.configs.recommended.rules,
-      ...importX.configs.typescript.rules,
       // 拡張子無しのimportを許可
       'import-x/extensions': [
         'error',
@@ -223,10 +239,11 @@ export default tseslint.config(
     },
   },
   // Storybook
+  ...storybook.configs['flat/recommended'],
   {
     files: ['*.{story,stories}.{ts,tsx}'],
     rules: {
-      'import/no-default-export': 'off',
+      'import-x/no-default-export': 'off',
       '@typescript-eslint/consistent-type-assertions': 'off',
       '@typescript-eslint/consistent-type-definitions': 'off',
     },
