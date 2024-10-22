@@ -33,12 +33,6 @@
       "groupName": "stylelint",
       "matchPackageNames": ["stylelint"],
       "matchPackagePrefixes": ["stylelint-"]
-    },
-    {
-      "matchPackageNames": ["eslint"],
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
     }
   ]
 }

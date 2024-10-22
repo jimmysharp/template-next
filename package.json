@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
@@ -20,14 +20,14 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^14.2.15",
-    "next": "14.2.15",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@next/bundle-analyzer": "15.0.0",
+    "next": "15.0.0",
+    "react": "19.0.0-rc-65a56d0e-20241020",
+    "react-dom": "19.0.0-rc-65a56d0e-20241020"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
-    "@next/eslint-plugin-next": "^15.0.0",
+    "@next/eslint-plugin-next": "15.0.0",
     "@storybook/addon-essentials": "^8.2.5",
     "@storybook/addon-interactions": "^8.2.5",
     "@storybook/addon-links": "^8.2.5",
@@ -40,8 +40,8 @@
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20.14.11",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "@vitest/coverage-istanbul": "^2.0.3",
     "@vitest/eslint-plugin": "^1.1.7",
@@ -74,5 +74,11 @@
   "engines": {
     "node": "20.15.1"
   },
-  "packageManager": "pnpm@9.8.0"
+  "packageManager": "pnpm@9.8.0",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    }
+  }
 }
