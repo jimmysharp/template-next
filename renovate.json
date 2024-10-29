@@ -18,21 +18,32 @@
   "rangeStrategy": "bump",
   "rebaseWhen": "conflicted",
   "labels": ["dependencies"],
-  "enabledManagers": ["npm", "dockerfile", "github-actions"],
+  "configMigration": true,
   "packageRules": [
     {
+      "description": "Update Node.js to the LTS version",
       "matchPackageNames": ["node"],
       "matchManagers": ["dockerfile"],
       "allowedVersions": "/^[0-9]*[02468]([.-].*)?$/"
     },
     {
       "groupName": "eslint",
-      "matchPackagePrefixes": ["eslint-"]
+      "matchPackageNames": ["eslint", "eslint-{/,}**", "@eslint/{/,}**"]
     },
     {
       "groupName": "stylelint",
-      "matchPackageNames": ["stylelint"],
-      "matchPackagePrefixes": ["stylelint-"]
+      "matchPackageNames": ["stylelint", "stylelint-{/,}**"]
+    },
+    {
+      "description": "Group all patch updates",
+      "groupName": "patch-updates",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "description": "Disable updates for overrides section",
+      "matchDepTypes": ["overrides", "pnpm.overrides"],
+      "enabled": false
     }
   ]
 }
