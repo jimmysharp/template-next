@@ -28,7 +28,7 @@
     },
     {
       "groupName": "eslint",
-      "matchPackageNames": ["eslint", "eslint-{/,}**"]
+      "matchPackageNames": ["eslint", "eslint-{/,}**", "@eslint/{/,}**"]
     },
     {
       "groupName": "stylelint",
