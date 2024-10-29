@@ -44,6 +44,11 @@
       "description": "Disable updates for overrides section",
       "matchDepTypes": ["overrides", "pnpm.overrides"],
       "enabled": false
+    },
+    {
+      "description": "Disable react updates until stable version",
+      "matchPackageNames": ["react", "react-dom"],
+      "enabled": false
     }
   ]
 }
