@@ -1,5 +1,5 @@
 # base image
-FROM node:20.18.0-alpine AS base
+FROM node:22.11.0-alpine AS base
 RUN corepack enable
 
 FROM base AS deps
