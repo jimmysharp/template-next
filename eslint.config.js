@@ -235,17 +235,23 @@ export default tseslint.config(
   {
     files: ['src/{pages,app}/**/*.{ts,tsx}'],
     rules: {
-      'import/no-default-export': 'off',
+      'import-x/no-default-export': 'off',
     },
   },
   // Storybook
   ...storybook.configs['flat/recommended'],
   {
-    files: ['*.{story,stories}.{ts,tsx}'],
+    files: ['**/*.{story,stories}.{ts,tsx}'],
     rules: {
       'import-x/no-default-export': 'off',
       '@typescript-eslint/consistent-type-assertions': 'off',
       '@typescript-eslint/consistent-type-definitions': 'off',
+    },
+  },
+  {
+    files: ['.storybook/**/*.{ts,tsx}'],
+    rules: {
+      'import-x/no-default-export': 'off',
     },
   },
   // Vitest / Testing Library
