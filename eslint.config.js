@@ -248,6 +248,12 @@ export default tseslint.config(
       '@typescript-eslint/consistent-type-definitions': 'off',
     },
   },
+  {
+    files: ['.storybook/**/*.{ts,tsx}'],
+    rules: {
+      'import-x/no-default-export': 'off',
+    },
+  },
   // Vitest / Testing Library
   {
     files: ['**/*.{test,spec}.{ts,tsx}'],
