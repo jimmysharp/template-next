@@ -57,7 +57,7 @@
     "eslint-plugin-storybook": "^0.11.2",
     "eslint-plugin-testing-library": "^7.1.1",
     "globals": "^15.14.0",
-    "jsdom": "^25.0.1",
+    "jsdom": "^26.0.0",
     "prettier": "^3.4.2",
     "sass": "^1.83.1",
     "storybook": "^8.4.7",
