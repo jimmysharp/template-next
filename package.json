@@ -43,8 +43,8 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "@vitejs/plugin-react-swc": "^3.7.2",
-    "@vitest/coverage-istanbul": "^3.0.4",
-    "@vitest/eslint-plugin": "^1.1.25",
+    "@vitest/coverage-istanbul": "^3.0.5",
+    "@vitest/eslint-plugin": "^1.1.27",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-import-resolver-typescript": "^3.7.0",
@@ -74,5 +74,5 @@
   "engines": {
     "node": "22.13.1"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@9.15.5"
 }
