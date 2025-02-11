@@ -74,5 +74,13 @@
   "engines": {
     "node": "22.13.1"
   },
-  "packageManager": "pnpm@9.15.4"
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
+  },
+  "packageManager": "pnpm@10.3.0"
 }
