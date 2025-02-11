@@ -20,14 +20,14 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "15.1.6",
-    "next": "15.1.6",
+    "@next/bundle-analyzer": "15.1.7",
+    "next": "15.1.7",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
-    "@next/eslint-plugin-next": "15.1.6",
+    "@next/eslint-plugin-next": "15.1.7",
     "@storybook/addon-essentials": "^8.5.3",
     "@storybook/addon-interactions": "^8.5.3",
     "@storybook/addon-links": "^8.5.3",
@@ -43,8 +43,8 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "@vitejs/plugin-react-swc": "^3.7.2",
-    "@vitest/coverage-istanbul": "^3.0.4",
-    "@vitest/eslint-plugin": "^1.1.25",
+    "@vitest/coverage-istanbul": "^3.0.5",
+    "@vitest/eslint-plugin": "^1.1.28",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-import-resolver-typescript": "^3.7.0",
