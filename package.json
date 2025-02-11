@@ -76,7 +76,10 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild"
+      "@swc/core",
+      "core-js-pure",
+      "esbuild",
+      "sharp"
     ]
   },
   "packageManager": "pnpm@10.3.0"
