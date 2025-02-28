@@ -8,7 +8,7 @@ import importX from 'eslint-plugin-import-x';
 import a11y from 'eslint-plugin-jsx-a11y';
 import preferArrow from 'eslint-plugin-prefer-arrow-functions';
 import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import * as reactHooks from 'eslint-plugin-react-hooks';
 import storybook from 'eslint-plugin-storybook';
 import testingLibrary from 'eslint-plugin-testing-library';
 import globals from 'globals';
