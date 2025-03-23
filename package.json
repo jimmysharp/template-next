@@ -59,7 +59,7 @@
     "globals": "^16.0.0",
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
-    "sass": "^1.85.1",
+    "sass": "^1.86.0",
     "storybook": "^8.6.8",
     "stylelint": "^16.16.0",
     "stylelint-config-recess-order": "^6.0.0",
