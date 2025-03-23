@@ -26,7 +26,7 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
+    "@eslint/js": "^9.23.0",
     "@next/eslint-plugin-next": "15.2.3",
     "@storybook/addon-essentials": "^8.6.8",
     "@storybook/addon-interactions": "^8.6.8",
@@ -45,11 +45,11 @@
     "@vitejs/plugin-react-swc": "^3.8.1",
     "@vitest/coverage-istanbul": "^3.0.9",
     "@vitest/eslint-plugin": "^1.1.38",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-import-resolver-typescript": "^4.2.2",
     "eslint-plugin-compat": "^6.0.2",
-    "eslint-plugin-import-x": "^4.8.0",
+    "eslint-plugin-import-x": "^4.9.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prefer-arrow-functions": "^3.6.2",
     "eslint-plugin-react": "^7.37.4",
