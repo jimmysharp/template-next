@@ -184,12 +184,10 @@ export default tseslint.config(
     },
   },
   // React
+  react.configs.flat.recommended,
+  react.configs.flat['jsx-runtime'],
+  reactHooks.configs['recommended-latest'],
   {
-    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-    },
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
@@ -206,9 +204,6 @@ export default tseslint.config(
       },
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
-      ...reactHooks.configs.recommended.rules,
       // TypeScriptにそぐわないルールの変更
       'react/prop-types': 'off',
       'react/require-default-props': 'off',
