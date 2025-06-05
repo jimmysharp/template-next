@@ -4,7 +4,7 @@ import tsParser from '@typescript-eslint/parser';
 import vitest from '@vitest/eslint-plugin';
 import prettier from 'eslint-config-prettier';
 import compat from 'eslint-plugin-compat';
-import importX from 'eslint-plugin-import-x';
+import { importX } from 'eslint-plugin-import-x';
 import a11y from 'eslint-plugin-jsx-a11y';
 import preferArrow from 'eslint-plugin-prefer-arrow-functions';
 import react from 'eslint-plugin-react';
