@@ -3,5 +3,15 @@ version: '3'
 services:
   frontend:
     build: .
+    environment:
+      OTEL_SERVICE_NAME: frontend
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+      OTEL_SAMPLING_RATE: 1
+      NEXT_TELEMETRY_DISABLED: 1
     ports:
       - 3000:3000
+
+  jaeger:
+    image: jaegertracing/jaeger:2.6.0
+    ports:
+      - 16686:16686
