@@ -1,20 +1,23 @@
+import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-grpc';
+import { UndiciInstrumentation } from '@opentelemetry/instrumentation-undici';
+import { resourceFromAttributes } from '@opentelemetry/resources';
+import { NodeSDK } from '@opentelemetry/sdk-node';
+
 import {
   ParentBasedSampler,
   TraceIdRatioBasedSampler,
 } from '@opentelemetry/sdk-trace-node';
-import { registerOTel } from '@vercel/otel';
+import { ATTR_SERVICE_NAME } from '@opentelemetry/semantic-conventions';
 import { NextJSSampler } from 'utils/NextJSSampler';
 
 export const setupNodeInstrumentation = (): void => {
-  registerOTel({
-    serviceName: process.env.OTEL_SERVICE_NAME ?? 'frontend',
-    instrumentationConfig: {
-      fetch: {
-        // TODO: traceを追跡するバックエンドのURLを追加
-        propagateContextUrls: [],
-      },
-    },
-    traceSampler: new ParentBasedSampler({
+  const sdk = new NodeSDK({
+    resource: resourceFromAttributes({
+      [ATTR_SERVICE_NAME]: process.env.OTEL_SERVICE_NAME ?? 'frontend',
+    }),
+    traceExporter: new OTLPTraceExporter(),
+    instrumentations: [new UndiciInstrumentation()],
+    sampler: new ParentBasedSampler({
       root: new NextJSSampler({
         base: new TraceIdRatioBasedSampler(
           Number(process.env.OTEL_SAMPLING_RATE ?? '1.0')
@@ -27,4 +30,6 @@ export const setupNodeInstrumentation = (): void => {
       }),
     }),
   });
+
+  sdk.start();
 };
