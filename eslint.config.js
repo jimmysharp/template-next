@@ -31,7 +31,9 @@ export default tseslint.config(
         ...globals.node,
       },
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['.storybook/*.ts', '.storybook/*.tsx'],
+        },
         parser: tsParser,
         tsconfigRootDir: import.meta.dirname,
       },
@@ -224,6 +226,12 @@ export default tseslint.config(
     },
     rules: {
       ...next.configs.recommended.rules,
+    },
+  },
+  {
+    files: ['next-env.d.ts'],
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
   // Next.js Router

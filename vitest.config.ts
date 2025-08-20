@@ -12,12 +12,6 @@ const config = defineConfig({
       provider: 'istanbul',
       reporter: ['text', 'html'],
       include: ['src/**/*.ts', 'src/**/*.tsx'],
-      exclude: [
-        'src/**/*.d.ts',
-        'src/**/*.test.ts',
-        'src/**/*.test.tsx',
-        'src/**/*.stories.tsx',
-      ],
     },
   },
 });
