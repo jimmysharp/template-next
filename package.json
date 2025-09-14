@@ -21,7 +21,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "15.5.2",
+    "@next/bundle-analyzer": "15.5.3",
     "@opentelemetry/api": "^1.9.0",
     "@opentelemetry/exporter-trace-otlp-grpc": "^0.203.0",
     "@opentelemetry/instrumentation-undici": "^0.14.0",
@@ -29,13 +29,13 @@
     "@opentelemetry/sdk-node": "^0.203.0",
     "@opentelemetry/sdk-trace-node": "^2.0.1",
     "@opentelemetry/semantic-conventions": "^1.36.0",
-    "next": "15.5.2",
+    "next": "15.5.3",
     "react": "19.1.1",
     "react-dom": "19.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
-    "@next/eslint-plugin-next": "15.5.2",
+    "@next/eslint-plugin-next": "15.5.3",
     "@storybook/addon-docs": "^9.1.5",
     "@storybook/addon-links": "^9.1.5",
     "@storybook/nextjs-vite": "^9.1.5",
@@ -44,7 +44,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.17.2",
-    "@types/react": "19.1.12",
+    "@types/react": "19.1.13",
     "@types/react-dom": "19.1.9",
     "@vitejs/plugin-react-swc": "^4.0.1",
     "@vitest/coverage-istanbul": "^3.2.4",
@@ -71,7 +71,7 @@
     "stylelint-no-unsupported-browser-features": "^8.0.4",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.4",
+    "vite": "^7.1.5",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
