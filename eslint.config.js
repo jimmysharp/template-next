@@ -8,7 +8,7 @@ import { importX } from 'eslint-plugin-import-x';
 import a11y from 'eslint-plugin-jsx-a11y';
 import preferArrow from 'eslint-plugin-prefer-arrow-functions';
 import react from 'eslint-plugin-react';
-import * as reactHooks from 'eslint-plugin-react-hooks';
+import reactHooks from 'eslint-plugin-react-hooks';
 import storybook from 'eslint-plugin-storybook';
 import testingLibrary from 'eslint-plugin-testing-library';
 import globals from 'globals';
@@ -188,7 +188,7 @@ export default tseslint.config(
   // React
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
-  reactHooks.configs['recommended-latest'],
+  reactHooks.configs.flat.recommended,
   {
     languageOptions: {
       parserOptions: {
