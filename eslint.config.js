@@ -220,20 +220,7 @@ export default tseslint.config(
     },
   },
   // Next.js
-  {
-    plugins: {
-      '@next/next': next,
-    },
-    rules: {
-      ...next.configs.recommended.rules,
-    },
-  },
-  {
-    files: ['next-env.d.ts'],
-    rules: {
-      '@typescript-eslint/triple-slash-reference': 'off',
-    },
-  },
+  next.configs.recommended,
   // Next.js Router
   {
     files: ['src/{pages,app}/**/*.{ts,tsx}'],
@@ -298,6 +285,7 @@ export default tseslint.config(
       'node_modules/',
       '.pnpm-store/',
       '.next/',
+      'next-env.d.ts',
       'coverage/',
       'storybook-static/',
     ],
