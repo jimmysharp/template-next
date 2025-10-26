@@ -66,7 +66,7 @@
     "eslint-plugin-storybook": "^9.1.15",
     "eslint-plugin-testing-library": "^7.13.3",
     "globals": "^16.4.0",
-    "jsdom": "^26.1.0",
+    "jsdom": "^27.0.1",
     "pino-pretty": "^13.1.2",
     "prettier": "^3.6.2",
     "sass": "^1.90.0",
