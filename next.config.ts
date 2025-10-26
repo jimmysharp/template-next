@@ -7,6 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ['localhost', '127.0.0.1'],
+  reactCompiler: true,
 };
 
 export default withBundleAnalyzer(nextConfig);
