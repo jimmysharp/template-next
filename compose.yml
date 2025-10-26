@@ -4,6 +4,7 @@ services:
   frontend:
     build: .
     environment:
+      LOG_LEVEL: debug
       OTEL_SERVICE_NAME: frontend
       OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4317
       OTEL_SAMPLING_RATE: 1
