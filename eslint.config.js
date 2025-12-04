@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import next from '@next/eslint-plugin-next';
 import tsParser from '@typescript-eslint/parser';
 import vitest from '@vitest/eslint-plugin';
+import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 import compat from 'eslint-plugin-compat';
 import { importX } from 'eslint-plugin-import-x';
@@ -14,7 +15,7 @@ import testingLibrary from 'eslint-plugin-testing-library';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig(
   eslint.configs.recommended,
   {
     rules: {
