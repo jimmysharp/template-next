@@ -30,7 +30,7 @@
     "@opentelemetry/sdk-trace-node": "^2.2.0",
     "@opentelemetry/semantic-conventions": "^1.38.0",
     "@t3-oss/env-nextjs": "^0.13.8",
-    "next": "16.0.7",
+    "next": "16.0.9",
     "pino": "^10.1.0",
     "react": "19.2.1",
     "react-dom": "19.2.1",
