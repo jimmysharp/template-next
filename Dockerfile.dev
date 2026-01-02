@@ -1,4 +1,4 @@
-FROM node:24.11.1-bookworm
+FROM node:24.12.0-bookworm
 WORKDIR /app
 
 RUN apt-get update -y && \
