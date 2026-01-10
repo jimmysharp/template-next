@@ -31,7 +31,7 @@
     "@opentelemetry/semantic-conventions": "^1.38.0",
     "@t3-oss/env-nextjs": "^0.13.10",
     "next": "16.1.1",
-    "pino": "^10.1.0",
+    "pino": "^10.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "server-only": "^0.0.1",
@@ -47,7 +47,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^24.10.4",
+    "@types/node": "^24.10.6",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
@@ -78,7 +78,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.1",
     "vite": "^7.1.12",
-    "vite-tsconfig-paths": "^6.0.3",
+    "vite-tsconfig-paths": "^6.0.4",
     "vitest": "^4.0.16"
   },
   "engines": {
