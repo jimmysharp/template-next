@@ -13,6 +13,6 @@ services:
       - 3000:3000
 
   jaeger:
-    image: jaegertracing/jaeger:2.14.1
+    image: jaegertracing/jaeger:2.15.1
     ports:
       - 16686:16686
