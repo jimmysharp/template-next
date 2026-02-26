@@ -2,13 +2,13 @@ import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-grpc';
 import { UndiciInstrumentation } from '@opentelemetry/instrumentation-undici';
 import { resourceFromAttributes } from '@opentelemetry/resources';
 import { NodeSDK } from '@opentelemetry/sdk-node';
-
 import {
   ParentBasedSampler,
   TraceIdRatioBasedSampler,
 } from '@opentelemetry/sdk-trace-node';
 import { ATTR_SERVICE_NAME } from '@opentelemetry/semantic-conventions';
-import { NextJSSampler } from 'utils/sampler';
+
+import { NextJSSampler } from '#/utils/sampler';
 
 export const setupNodeInstrumentation = (): void => {
   const sdk = new NodeSDK({
@@ -20,7 +20,7 @@ export const setupNodeInstrumentation = (): void => {
     sampler: new ParentBasedSampler({
       root: new NextJSSampler({
         base: new TraceIdRatioBasedSampler(
-          Number(process.env.OTEL_SAMPLING_RATE ?? '1.0')
+          Number(process.env.OTEL_SAMPLING_RATE ?? '1.0'),
         ),
         ignorePatterns: [
           /^\/_next\/static\//,
