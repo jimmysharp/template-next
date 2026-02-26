@@ -8,7 +8,7 @@ import {
   TraceIdRatioBasedSampler,
 } from '@opentelemetry/sdk-trace-node';
 import { ATTR_SERVICE_NAME } from '@opentelemetry/semantic-conventions';
-import { NextJSSampler } from 'utils/NextJSSampler';
+import { NextJSSampler } from 'utils/sampler';
 
 export const setupNodeInstrumentation = (): void => {
   const sdk = new NodeSDK({

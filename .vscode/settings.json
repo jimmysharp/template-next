@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.oxc": "explicit"
   },
   "editor.renderControlCharacters": true,
   "files.eol": "\n",
@@ -23,5 +23,6 @@
   },
   "stylelint.validate": ["css", "scss", "less", "postcss"],
   "css.validate": false,
-  "typescript.preferences.preferTypeOnlyAutoImports": true
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "oxc.typeAware": true
 }

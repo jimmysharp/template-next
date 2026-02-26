@@ -2,7 +2,7 @@ import 'server-only';
 
 import { trace } from '@opentelemetry/api';
 import type { NextRequest } from 'next/server';
-import { pino, Logger as PinoLogger } from 'pino';
+import { pino, type Logger as PinoLogger } from 'pino';
 import { env } from 'config/env';
 
 type LogSerializable =

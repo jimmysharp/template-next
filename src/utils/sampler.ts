@@ -32,7 +32,7 @@ export class NextJSSampler implements Sampler {
   shouldSample(...args: Parameters<Sampler['shouldSample']>): SamplingResult {
     const attributes: Attributes = args[4];
 
-    // TODO: keep an eye on https://github.com/vercel/otel/issues/143#issue-2874289175
+    // keep an eye on https://github.com/vercel/otel/issues/143#issue-2874289175
     const route =
       // this is not populated at the moment of execution of the sampler
       this.getNextRoute(attributes) ??
@@ -64,7 +64,7 @@ export class NextJSSampler implements Sampler {
   };
 
   getHttpTarget = (attributes: Attributes): string | undefined => {
-    // TODO: replace SEMATTRS_HTTP_TARGET when better alternative is available
+    // replace SEMATTRS_HTTP_TARGET when better alternative is available
     //       https://github.com/vercel/otel/issues/143#issuecomment-2678223912
     // eslint-disable-next-line @typescript-eslint/no-deprecated
     const value = attributes[SEMATTRS_HTTP_TARGET];

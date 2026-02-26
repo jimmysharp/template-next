@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { JSX } from 'react';
+import type { JSX } from 'react';
 
 import styles from './page.module.css';
 
