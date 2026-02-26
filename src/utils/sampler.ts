@@ -66,7 +66,7 @@ export class NextJSSampler implements Sampler {
   getHttpTarget = (attributes: Attributes): string | undefined => {
     // replace SEMATTRS_HTTP_TARGET when better alternative is available
     //       https://github.com/vercel/otel/issues/143#issuecomment-2678223912
-    // eslint-disable-next-line @typescript-eslint/no-deprecated
+    // oxlint-disable-next-line typescript/no-deprecated
     const value = attributes[SEMATTRS_HTTP_TARGET];
     if (typeof value === 'string') return value;
     return undefined;
