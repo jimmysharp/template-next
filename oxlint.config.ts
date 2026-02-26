@@ -15,7 +15,6 @@ const config = defineConfig({
   categories: {
     correctness: 'error',
     suspicious: 'error',
-    pedantic: 'error',
     perf: 'error',
   },
   env: {
@@ -51,30 +50,20 @@ const config = defineConfig({
     'react/jsx-pascal-case': [
       'error',
       {
+        allowAllCaps: true,
         allowNamespace: true,
       },
     ],
     'react/self-closing-comp': 'error',
     'vitest/consistent-vitest-vi': 'error',
     'vitest/no-importing-vitest-globals': 'error',
+    // pedantic rules
+    eqeqeq: ['error', 'smart'],
+    'typescript/no-deprecated': 'error',
+    'typescript/prefer-ts-expect-error': 'error',
     // Reactにそぐわないルールの変更
-    'max-lines-per-function': 'off',
-    'no-ternary': 'off',
     'no-undefined': 'off',
     'import/no-unassigned-import': 'off',
-    'typescript/no-confusing-void-expression': [
-      'error',
-      {
-        ignoreArrowShorthand: true,
-        ignoreVoidOperator: true,
-      },
-    ],
-    'typescript/no-misused-promises': [
-      'error',
-      {
-        checksVoidReturn: false,
-      },
-    ],
     'typescript/no-unused-vars': [
       'error',
       {
@@ -82,7 +71,6 @@ const config = defineConfig({
         varsIgnorePattern: '^_',
       },
     ],
-    'typescript/strict-boolean-expressions': 'off',
     'typescript/triple-slash-reference': 'off',
     'react/react-in-jsx-scope': 'off',
   },
@@ -92,6 +80,14 @@ const config = defineConfig({
       files: ['src/{pages,app}/**/*.{ts,tsx}'],
       rules: {
         'import/no-default-export': 'off',
+      },
+    },
+    // Tests
+    {
+      files: ['*.{spec,test}.{ts,tsx}'],
+      rules: {
+        'no-await-in-loop': 'off',
+        'typescript/no-unsafe-type-assertion': 'off',
       },
     },
     // Storybook
