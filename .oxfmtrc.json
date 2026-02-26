@@ -9,26 +9,13 @@
   "printWidth": 80,
   "sortPackageJson": false,
   "sortImports": {
-    "customGroups": [
-      {
-        "groupName": "styles",
-        "elementNamePattern": ["**.{css,scss}"]
-      }
-    ],
     "internalPattern": ["#/"],
     "groups": [
-      ["type-builtin", "value-builtin"],
-      ["type-external", "value-external"],
-      ["type-internal", "value-internal"],
-      [
-        "type-parent",
-        "type-sibling",
-        "type-index",
-        "value-parent",
-        "value-sibling",
-        "value-index"
-      ],
-      "styles",
+      "builtin",
+      "external",
+      "internal",
+      ["parent", "sibling", "index"],
+      "style",
       "unknown"
     ]
   },

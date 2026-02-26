@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
 
 import { Button } from './Button';
+
 import './header.css';
 
 type User = {
