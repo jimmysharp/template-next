@@ -1,9 +1,9 @@
 import 'server-only';
-
 import { trace } from '@opentelemetry/api';
 import type { NextRequest } from 'next/server';
 import { pino, type Logger as PinoLogger } from 'pino';
-import { env } from 'config/env';
+
+import { env } from '#/config/env';
 
 type LogSerializable =
   | string
@@ -49,7 +49,7 @@ export class Logger {
         ...data,
         ...(error && { err: error }),
       },
-      msg
+      msg,
     );
   }
 
@@ -65,7 +65,7 @@ export class Logger {
         ...data,
         ...(error && { err: error }),
       },
-      msg
+      msg,
     );
   }
 
@@ -81,7 +81,7 @@ export class Logger {
         ...data,
         ...(error && { err: error }),
       },
-      msg
+      msg,
     );
   }
 
@@ -97,7 +97,7 @@ export class Logger {
         ...data,
         ...(error && { err: error }),
       },
-      msg
+      msg,
     );
   }
 
@@ -113,7 +113,7 @@ export class Logger {
         ...data,
         ...(error && { err: error }),
       },
-      msg
+      msg,
     );
   }
 
@@ -129,7 +129,7 @@ export class Logger {
         ...data,
         ...(error && { err: error }),
       },
-      msg
+      msg,
     );
   }
 

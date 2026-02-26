@@ -8,15 +8,15 @@
   "files.autoGuessEncoding": true,
   "javascript.format.enable": false,
   "[json][jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.tabSize": 2
   },
   "[javascript][javascriptreact][typescript][typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.tabSize": 2
   },
   "[css][scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": "explicit"
     }
@@ -24,5 +24,6 @@
   "stylelint.validate": ["css", "scss", "less", "postcss"],
   "css.validate": false,
   "typescript.preferences.preferTypeOnlyAutoImports": true,
-  "oxc.typeAware": true
+  "oxc.typeAware": true,
+  "oxc.fmt.configPath": ".oxfmtrc.json"
 }
