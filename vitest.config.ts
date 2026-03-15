@@ -1,9 +1,11 @@
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import { playwright } from '@vitest/browser-playwright';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
 const config = defineConfig({
+  resolve: {
+    tsconfigPaths: true,
+  },
   test: {
     coverage: {
       provider: 'istanbul',
@@ -13,7 +15,6 @@ const config = defineConfig({
     },
     projects: [
       {
-        plugins: [tsconfigPaths()],
         test: {
           name: 'node',
           globals: true,
@@ -22,7 +23,7 @@ const config = defineConfig({
         },
       },
       {
-        plugins: [react(), tsconfigPaths()],
+        plugins: [react()],
         test: {
           name: 'browser',
           globals: true,
