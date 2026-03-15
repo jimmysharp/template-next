@@ -1,0 +1,32 @@
+import { defineConfig } from 'oxfmt';
+
+export default defineConfig({
+  tabWidth: 2,
+  useTabs: false,
+  singleQuote: true,
+  trailingComma: 'all',
+  bracketSpacing: true,
+  endOfLine: 'lf',
+  printWidth: 80,
+  sortPackageJson: false,
+  sortImports: {
+    internalPattern: ['#/'],
+    groups: [
+      'builtin',
+      'external',
+      'internal',
+      ['parent', 'sibling', 'index'],
+      'style',
+      'unknown',
+    ],
+  },
+  ignorePatterns: [
+    'node_modules',
+    '.pnpm-store',
+    '.next',
+    'coverage',
+    'storybook-static',
+    'package.json',
+    'pnpm-lock.yaml',
+  ],
+});

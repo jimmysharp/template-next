@@ -1,6 +1,9 @@
 import { defineConfig } from 'oxlint';
 
 const config = defineConfig({
+  options: {
+    typeAware: true,
+  },
   plugins: [
     'oxc',
     'eslint',

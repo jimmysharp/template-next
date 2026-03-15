@@ -6,7 +6,7 @@
   "editor.renderControlCharacters": true,
   "files.eol": "\n",
   "files.autoGuessEncoding": true,
-  "javascript.format.enable": false,
+  "js/ts.format.enabled": false,
   "[json][jsonc]": {
     "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.tabSize": 2
@@ -23,7 +23,6 @@
   },
   "stylelint.validate": ["css", "scss", "less", "postcss"],
   "css.validate": false,
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
-  "oxc.typeAware": true,
-  "oxc.fmt.configPath": ".oxfmtrc.json"
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
+  "oxc.typeAware": true
 }
