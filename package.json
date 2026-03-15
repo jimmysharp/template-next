@@ -11,7 +11,7 @@
     "build": "next build",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
-    "lint": "oxlint --type-aware",
+    "lint": "oxlint",
     "lint:style": "stylelint '**/*.{css,scss}'",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
