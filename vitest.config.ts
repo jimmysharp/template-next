@@ -23,7 +23,7 @@ const config = defineConfig({
         },
       },
       {
-        plugins: [react()],
+        plugins: [react({ compiler: true })],
         test: {
           name: 'browser',
           globals: true,
