@@ -16,4 +16,4 @@ jobs:
           node-version: 'lts/*'
       - run: |
           cd /tmp
-          npx --yes --package renovate -- renovate-config-validator --strict
+          npx --yes --package renovate -- renovate-config-validator --strict "$GITHUB_WORKSPACE/renovate.json"
