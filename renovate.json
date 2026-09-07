@@ -9,7 +9,8 @@
     "replacements:all",
     "workarounds:all",
     ":disableDependencyDashboard",
-    ":prHourlyLimitNone"
+    ":prHourlyLimitNone",
+    "helpers:pinGitHubActionDigests"
   ],
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
@@ -25,10 +26,6 @@
       "matchPackageNames": ["node"],
       "matchManagers": ["dockerfile"],
       "allowedVersions": "/^[0-9]*[02468]([.-].*)?$/"
-    },
-    {
-      "groupName": "eslint",
-      "matchPackageNames": ["eslint", "eslint-{/,}**", "@eslint/{/,}**"]
     },
     {
       "groupName": "stylelint",
