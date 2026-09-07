@@ -17,10 +17,12 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version-file: package.json
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/setup@v2.1.0
+        with:
+          install: true
+          require-lockfile: true
+          cache: true
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps chromium
       - name: Format check
