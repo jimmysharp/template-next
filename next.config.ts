@@ -1,9 +1,4 @@
-import bundleAnalyzer from '@next/bundle-analyzer';
 import type { NextConfig } from 'next';
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ['localhost', '127.0.0.1'],
@@ -13,6 +8,9 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   serverExternalPackages: ['pino', 'transport-stream'],
   poweredByHeader: false,
+  experimental: {
+    turbopackRustReactCompiler: true,
+  },
 };
 
-export default withBundleAnalyzer(nextConfig);
+export default nextConfig;
