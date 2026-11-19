@@ -45,7 +45,7 @@
     "@storybook/addon-docs": "^10.2.19",
     "@storybook/addon-links": "^10.2.19",
     "@storybook/nextjs-vite": "^10.2.19",
-    "@types/node": "^24.12.2",
+    "@types/node": "^26.6.6",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
@@ -68,7 +68,7 @@
     "vitest-browser-react": "^2.3.0"
   },
   "engines": {
-    "node": "24.20.0"
+    "node": "26.13.1"
   },
   "devEngines": {
     "packageManager": {
