@@ -49,8 +49,8 @@
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
-    "@vitest/browser-playwright": "^5.0.0",
-    "@vitest/coverage-istanbul": "^5.0.0",
+    "@vitest/browser-playwright": "^5.1.2",
+    "@vitest/coverage-istanbul": "^5.1.2",
     "oxc-transform-react": "^0.148.0",
     "oxfmt": "^0.40.0",
     "oxlint": "^1.55.0",
@@ -64,7 +64,7 @@
     "stylelint-config-standard-scss": "^17.0.0",
     "typescript": "^5.9.3",
     "vite": "^8.2.2",
-    "vitest": "^5.0.0",
+    "vitest": "^5.1.2",
     "vitest-browser-react": "^2.3.0"
   },
   "engines": {
