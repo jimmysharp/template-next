@@ -1,5 +1,5 @@
 # base image
-FROM node:24.20.0-slim AS base
+FROM node:26.13.1-slim AS base
 
 FROM base as tooling
 RUN npm install -g pnpm
